@@ -1,0 +1,29 @@
+--------------------------
+Occupancy gridmap building
+--------------------------
+The goal of this optional project is to implement the needed functionality so a robot moving in an environment can build an occupancy gridmap of it.
+
+Starting setup
+--------------
+ - A 2D laser simulator is provided.
+ - The environment is defined with lines. You can modify it.
+ - Localization is known.
+
+Implementation
+--------------
+ - All the code must be implemented by your own.
+ - Implementation as a Jupyter notebook.
+ - In order to build the map, the robot has to move within it. Implement the robot motion.
+ - Implement the building of the occupancy gridmap with the information coming from the laser and the known robot pose. 
+ - You would need to implement the inverse sensor model.
+
+Optional aspects
+----------------
+ - Change the map definition to an arbitrary input image.
+ - Implement a new laser simulator able to work with this new representation (e.g. ray tracing).
+ - Consider that the localization is not given, so you have to compute it when the robot moves. You can use, for example, ICP.
+ - Implement different surfaces in the map, so the sensor performance may vary (e.g., appearing large errors). For example, black surfaces absorb more infrarred rays, difficulting sensor operation.
+Laser related:
+  - Test the efect of different real lasers (surf the internet to find them, e.g. Hokuyo, Sick) in the resulting map (different FOV, max range, resolution, error, etc.).
+ - Implement additional sources of uncertainty in the laser measurements: random and max range.
+ - Implement moving obstacles (people, pets, etc.).
